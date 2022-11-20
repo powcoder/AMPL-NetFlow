@@ -1,0 +1,8 @@
+reset;
+reset;
+model NetFlow.mod;
+data NetFlow.dat;
+option solver cplex;
+option cplex_options 'netopt=1'; #invokes the network optimizer when the model is defined using the arc and node commands
+solve;
+display Ship;
